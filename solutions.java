@@ -93,3 +93,54 @@ public class solution{
 }
 
 */
+
+/* Day 2 Part 2
+import java.util.Scanner; 
+import java.io.File;
+import java.io.FileNotFoundException;
+
+
+public class solution{
+    public static void main(String[] args){
+
+        
+        try {
+            // open file to read
+            Scanner scanner = new Scanner(new File("input3.txt"));
+        
+            // read until end of file (EOF)
+            
+            int depth = 0;
+            int horizontal = 0;
+            int aim = 0;
+            
+            while (scanner.hasNextLine()) {
+                String direction = scanner.next();
+                int value = scanner.nextInt();
+                if (direction.equals("forward")){
+                    horizontal = horizontal +  value;
+                    depth = depth + (aim * value);
+                }
+                else if (direction.equals("down")) {
+                    aim = aim + value;
+                }
+                else if (direction.equals("up")){
+                    aim = aim - value;
+                }
+            }
+            System.out.println(depth);
+            System.out.println(horizontal);
+            System.out.println(depth * horizontal);
+            
+            
+        
+            // close the scanner
+            scanner.close();
+                
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+}
+*/ 
